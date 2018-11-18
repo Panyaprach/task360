@@ -35,6 +35,8 @@ Or, If you are using `linux` machine.
 ```bash
 ./mvnw clean install
 ```
+> **Note:** If you are using window machine. The maven warpper do not support on PowerShell. I recommend you run with the Command Prompt.
+
 Finally, run the project with docker compose.
 ```bash
 docker-compose up
@@ -61,10 +63,10 @@ This is the sample json model when you need to use `POST` or `PUT` request. exam
   "id" : 1,
   "subject" : "required",
   "detail" : "the status string accept only 2 case sensitive values are `PENDING` and `DONE`",
-  "status" : "DONE",
+  "status" : "DONE"
 }
 ```
 + `id` : number (can contain long type)
 + `subject` : string (required can not be null)
 + `detail` : string
-+ `status` : string (accept only 2 case sensitive values are `PENDING` and `DONE`)
++ `status` : string (accept only 2 case sensitive string are `PENDING` and `DONE`)
