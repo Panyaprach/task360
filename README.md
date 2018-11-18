@@ -40,11 +40,10 @@ Finally, run the project with docker compose.
 docker-compose up
 ```
 > **Note:** Do not worry about error occur in Spring Boot Application. You just wait until MySQL container available. The container will refresh itself. 
+
 #### Endpoints
 
-When an application has trouble will return the cause of the trouble.
-
-METHOD | PATH | DESCRIPTION | POSSIBLE RESSPONSE
+METHOD | PATH | DESCRIPTION | POSSIBLE RESPONSE
 --- | --- | --- | ---
 *GET* | tasks | view all tasks | `200` when success
 *GET* | tasks/{id} | find a single task by id | `200` when success, `400` when failed
@@ -52,6 +51,8 @@ METHOD | PATH | DESCRIPTION | POSSIBLE RESSPONSE
 *PUT* | tasks/{id} | edit a task | `204` when success, `400` when failed
 *PATCH* | tasks/{id}/status | change a task status | `204` when success, `400` when failed
 *DELETE* | tasks/{id} | delete a task by id | `204` when success, `400` when failed
+
+> **Note:** When an application has trouble will return the cause of the trouble.
 
 #### Sample Model
 This is the sample json model when you need to use `POST` or `PUT` request. example below,
