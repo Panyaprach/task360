@@ -1,12 +1,11 @@
 # TASK360
-The TASK360 is the RESTful API use for store the resources for a simple 'to do' task list. This project depends developed by following stack,
+The TASK360 is the RESTful API use to store the resources for a simple 'to do' task list. This project depends on the following stack,
 + Spring Boot
 + MySQL
 + Docker (Docker-Compose)
 
-All requests available on `localhost:8080`. All api access is over http. All data received as JSON.
-This guide walks you build the docker image for running a Spring Boot Application. If you are NOT using WINDOW machine, 
-May the command be little differences. 
+All requests available on `localhost:8080`. All API access is over `http`. All data received as `json`.
+This guide walks you build the docker image for running a Spring Boot Application.
 
 ### Table of Contents
 **[Preparing Environment](#preparing-environment)**<br>
@@ -28,18 +27,22 @@ Second, change into project directory.
 ```bash
 cd task360
 ```
-Third, use maven warpper build the project
+Third, use maven warpper build the project.
 ```bash
 mvnw clean install
 ```
-Finally, run the project with docker compose
+Or, If you are using `linux` machine.
+```bash
+./mvnw clean install
+```
+Finally, run the project with docker compose.
 ```bash
 docker-compose up
 ```
-
+> **Note:** Do not worry about error occur in Spring Boot Application. You just wait until MySQL container available. The container will refresh itself. 
 #### Endpoints
 
-When an application has trouble will return the cause of trouble.
+When an application has trouble will return the cause of the trouble.
 
 METHOD | PATH | DESCRIPTION | POSSIBLE RESSPONSE
 --- | --- | --- | ---
@@ -50,7 +53,7 @@ METHOD | PATH | DESCRIPTION | POSSIBLE RESSPONSE
 *PATCH* | tasks/{id}/status | change a task status | `204` when success, `400` when failed
 *DELETE* | tasks/{id} | delete a task by id | `204` when success, `400` when failed
 
-### Sample Model
+#### Sample Model
 This is the sample json model when you need to use `POST` or `PUT` request. example below,
 ```json
 {
