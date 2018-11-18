@@ -33,7 +33,7 @@ Finally, run the project with docker-compose.
 docker-compose up
 ```
 Then, go check your services is running at `localhost:8080`
-> **Note:** Do not worry if you found error occur in Spring Boot Application. You just wait until MySQL container available. The container will refresh itself. 
+> **Note:** Don't worry if you found error occurring in Spring Boot Application. You just need to wait until MySQL container available. The container will refresh itself. 
 
 #### Endpoints
 
@@ -47,7 +47,6 @@ METHOD | PATH | DESCRIPTION | POSSIBLE RESPONSE
 *DELETE* | tasks/{id} | delete a task by id | `204` when success, `400` when failed
 
 Because of the task status had only two status, So the `PATCH` status does not need a request body.
-> **Note:** When an application has trouble will return the cause of the trouble.
 
 #### Sample Model
 This is the sample json model when you need to use `POST` or `PUT` request. example below,
