@@ -32,7 +32,7 @@ Finally, run the project with docker-compose.
 ```bash
 docker-compose up
 ```
-Then, go check your services is running at `localhost:8080`
+Then, go check your application is available on `http://localhost:8080/`
 > **Note:** Don't worry if you found error occurring in Spring Boot Application. You just need to wait until MySQL container available. The container will refresh itself. 
 
 #### Endpoints
