@@ -1,0 +1,23 @@
+## First Docker Compose
+version: '3'
+
+services:
+    mysql-db:
+        image: mysql:latest
+        environment:
+            - MYSQL_DATABASE=asg360
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=app
+            - MYSQL_PASSWORD=root
+        ports:
+            - 3306:3306
+    application:
+        build: .
+        image: spantech/task360
+        restart: on-failure
+        depends_on:
+            - mysql-db
+        links:
+            - mysql-db
+        ports: 
+            - 8080:8080

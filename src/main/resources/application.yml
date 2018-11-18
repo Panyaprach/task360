@@ -1,0 +1,14 @@
+spring:
+# Hibernate
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+        hibernate:
+            ddl-auto: update
+# Datasource
+    datasource:
+        url: jdbc:mysql://mysql-db:3306/asg360
+        username: app
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
