@@ -5,7 +5,8 @@ The TASK360 is the RESTful API use to store the resources for a simple 'to do' t
 + Docker (Docker-Compose)
 
 All requests available on `localhost:8080`. All API access is over `http`. All data received as `json`.
-This guide walks you build the docker image for running a Spring Boot Application.
+
+This guide walks you build the docker image for running a Spring Boot Application. This may take a long time depends on your internet connection.
 
 ### Table of Contents
 **[Preparing Environment](#preparing-environment)**<br>
@@ -27,21 +28,12 @@ Second, change into project directory.
 ```bash
 cd task360
 ```
-Third, use maven warpper build the project.
-```bash
-mvnw clean install
-```
-Or, If you are using `linux` machine.
-```bash
-./mvnw clean install
-```
-> **Note:** If you are using window machine. The maven warpper do not support on PowerShell. I recommend you run with the Command Prompt.
-
-Finally, run the project with docker compose.
+Finally, run the project with docker-compose.
 ```bash
 docker-compose up
 ```
-> **Note:** Do not worry about error occur in Spring Boot Application. You just wait until MySQL container available. The container will refresh itself. 
+Then, go check your services is running at `localhost:8080`
+> **Note:** Do not worry if you found error occur in Spring Boot Application. You just wait until MySQL container available. The container will refresh itself. 
 
 #### Endpoints
 
@@ -54,6 +46,7 @@ METHOD | PATH | DESCRIPTION | POSSIBLE RESPONSE
 *PATCH* | tasks/{id}/status | change a task status | `204` when success, `400` when failed
 *DELETE* | tasks/{id} | delete a task by id | `204` when success, `400` when failed
 
+Because of the task status had only two status, So the `PATCH` status does not need a request body.
 > **Note:** When an application has trouble will return the cause of the trouble.
 
 #### Sample Model
