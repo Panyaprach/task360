@@ -46,7 +46,7 @@ METHOD | PATH | DESCRIPTION | POSSIBLE RESPONSE
 *PATCH* | tasks/{id}/status | change a task status | `204` when success, `400` when failed
 *DELETE* | tasks/{id} | delete a task by id | `204` when success, `400` when failed
 
-Because of the task status had only two status, So the `PATCH` status does not need a request body.
+Because of the task status had only two status, So the `PATCH` request for set a task status does not need a request body.
 
 #### Sample Model
 This is the sample json model when you need to use `POST` or `PUT` request. example below,
